@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Animais Sem Teto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <span class="mobile-nav-close" id="mobileNavClose" role="button" tabindex="0" aria-label="Fechar menu">✕</span>
+    <a href="#inicio" onclick="closeMobileNav()">Início</a>
+    <a href="#sobre" onclick="closeMobileNav()">Sobre</a>
+    <a href="#como-ajudar" onclick="closeMobileNav()">Como Ajudar</a>
+    <a href="#adocao" onclick="closeMobileNav()">Adoção</a>
+    <a href="#contato" onclick="closeMobileNav()">Contato</a>
+  </div>
+
+  <header id="header">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo" aria-label="Projeto Animais Sem Teto - Início">
+        <div class="logo-icon" aria-hidden="true">🐾</div>
+        <div class="logo-text">
+          Projeto Animais<br>
+          <span>Sem Teto</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-ajudar">Como Ajudar</a></li>
+          <li><a href="#adocao">Adoção</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#como-ajudar" class="btn btn-primary nav-cta">Quero Ajudar</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section id="inicio" aria-label="Seção principal">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge" aria-label="Status da ONG">🐶 ONG sem fins lucrativos</span>
+        <h1 class="hero-title">
+          Eles só precisam<br>de <em>uma chance.</em>
+        </h1>
+        <p class="hero-sub">
+          Resgatamos, cuidamos e encontramos lares amorosos para animais abandonados. 
+          Juntos podemos transformar vidas — uma patinha de cada vez.
+        </p>
+        <div class="hero-actions">
+          <a href="#como-ajudar" class="btn btn-primary">❤️ Fazer uma Doação</a>
+          <a href="#adocao" class="btn btn-outline">🐾 Ver Animais para Adoção</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats" aria-label="Estatísticas da ONG">
+      <div class="container">
+        <div class="stat">
+          <div class="stat-num" data-target="1240">0</div>
+          <div class="stat-desc">Animais Resgatados</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <div class="stat-num" data-target="980">0</div>
+          <div class="stat-desc">Adoções Realizadas</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <div class="stat-num" data-target="85">0</div>
+          <div class="stat-desc">Voluntários Ativos</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <div class="stat-num" data-target="6">0</div>
+          <div class="stat-desc">Anos de Atuação</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" aria-labelledby="sobre-title">
+    <div class="container sobre-grid">
+      <div class="sobre-img-wrapper fade-up">
+        <img
+          class="sobre-img-main"
+          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
+          alt="Voluntária com cães resgatados no abrigo"
+          loading="lazy"
+        />
+        <img
+          class="sobre-img-accent"
+          src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80"
+          alt="Gato resgatado feliz"
+          loading="lazy"
+        />
+        <span class="sobre-tag">Desde 2018</span>
+      </div>
+
+      <div class="sobre-text fade-up">
+        <span class="section-label">Quem Somos</span>
+        <h2 class="section-title" id="sobre-title">Uma história de<br>amor e resgate</h2>
+
+        <p style="margin-top:20px">
+          O <strong>Projeto Animais Sem Teto</strong> nasceu em 2018 de um simples ato de compaixão: 
+          uma família que resgatou um cãozinho das ruas e percebeu que a necessidade era muito maior.
+        </p>
+        <p>
+          Hoje somos uma rede de voluntários e parceiros dedicados a resgatar animais em situação 
+          de abandono, oferecer cuidados veterinários e conectá-los a famílias amorosas em todo o Brasil.
+        </p>
+
+        <div class="mvv-grid">
+          <div class="mvv-card">
+            <div class="mvv-icon">🎯</div>
+            <h4>Missão</h4>
+            <p>Resgatar, reabilitar e recolocar animais em lares seguros e amorosos.</p>
+          </div>
+          <div class="mvv-card">
+            <div class="mvv-icon">🌟</div>
+            <h4>Visão</h4>
+            <p>Um Brasil sem animais abandonados nas ruas, onde todo pet tem um lar.</p>
+          </div>
+          <div class="mvv-card">
+            <div class="mvv-icon">💚</div>
+            <h4>Valores</h4>
+            <p>Empatia, transparência, responsabilidade e amor incondicional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-ajudar" aria-labelledby="ajudar-title">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Faça a Diferença</span>
+        <h2 class="section-title" id="ajudar-title">Como você pode ajudar</h2>
+        <p>Existem diversas formas de fazer parte desta causa. Escolha a que mais combina com você.</p>
+      </div>
+
+      <div class="ajudar-grid">
+        <div class="ajudar-card fade-up">
+          <span class="ajudar-emoji" aria-hidden="true">💰</span>
+          <h3>Doação</h3>
+          <p>
+            Sua contribuição financia ração, medicamentos, cirurgias e a manutenção do abrigo. 
+            Até R$10 fazem uma grande diferença na vida de um animal.
+          </p>
+          <a href="#doe" class="btn btn-primary">Quero Doar</a>
+        </div>
+
+        <div class="ajudar-card fade-up">
+          <span class="ajudar-emoji" aria-hidden="true">🏠</span>
+          <h3>Adoção</h3>
+          <p>
+            Abra as portas do seu coração e da sua casa. Temos cães e gatos de todas as idades 
+            esperando por uma família que os ame de verdade.
+          </p>
+          <a href="#adocao" class="btn btn-green">Ver Animais</a>
+        </div>
+
+        <div class="ajudar-card fade-up">
+          <span class="ajudar-emoji" aria-hidden="true">🤝</span>
+          <h3>Voluntariado</h3>
+          <p>
+            Doe seu tempo e talento. Precisamos de voluntários para passeios, socialização, 
+            transporte, fotografia e muito mais.
+          </p>
+          <a href="#contato" class="btn btn-outline" style="color:var(--brown);border-color:var(--warm)">Seja Voluntário</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="doe-banner" id="doe" aria-label="Seção de doação rápida">
+    <div class="container">
+      <h2>Cada real salva uma vida 🐾</h2>
+      <p>Escolha um valor ou defina o seu. 100% do valor vai para os animais.</p>
+      <div class="doe-amounts" role="group" aria-label="Valores de doação sugeridos">
+        <button class="doe-amount" onclick="selectAmount(this, 10)">R$ 10</button>
+        <button class="doe-amount active" onclick="selectAmount(this, 25)">R$ 25</button>
+        <button class="doe-amount" onclick="selectAmount(this, 50)">R$ 50</button>
+        <button class="doe-amount" onclick="selectAmount(this, 100)">R$ 100</button>
+        <button class="doe-amount" onclick="selectAmount(this, 'outro')">Outro valor</button>
+      </div>
+      <a href="#contato" class="btn" style="background:white;color:var(--orange);padding:14px 40px;font-size:1rem;">
+        ❤️ Confirmar Doação de R$ 25
+      </a>
+    </div>
+  </div>
+
+  <section id="adocao" aria-labelledby="adocao-title">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Lar Urgente</span>
+        <h2 class="section-title" id="adocao-title">Animais esperando por você</h2>
+        <p>Cada um tem sua história, personalidade e muito amor para dar.</p>
+      </div>
+
+      <div class="pets-grid">
+        <article class="pet-card fade-up" aria-label="Bolinha - disponível para adoção">
+          <div class="pet-img-wrap">
+            <img
+              class="pet-img"
+              src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80"
+              alt="Bolinha, cão labrador amarelo"
+              loading="lazy"
+            />
+            <span class="pet-badge">Disponível</span>
+          </div>
+          <div class="pet-info">
+            <div class="pet-name">Bolinha 🐶</div>
+            <div class="pet-details">Labrador · 2 anos · Macho</div>
+            <a href="#contato" class="btn btn-primary pet-btn">Adotar Bolinha</a>
+          </div>
+        </article>
+
+        <article class="pet-card fade-up" aria-label="Mel - disponível para adoção">
+          <div class="pet-img-wrap">
+            <img
+              class="pet-img"
+              src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=500&q=80"
+              alt="Mel, gata laranja"
+              loading="lazy"
+            />
+            <span class="pet-badge">Disponível</span>
+          </div>
+          <div class="pet-info">
+            <div class="pet-name">Mel 🐱</div>
+            <div class="pet-details">SRD · 1 ano · Fêmea</div>
+            <a href="#contato" class="btn btn-primary pet-btn">Adotar Mel</a>
+          </div>
+        </article>
+
+        <article class="pet-card fade-up" aria-label="Thor - disponível para adoção">
+          <div class="pet-img-wrap">
+            <img
+              class="pet-img"
+              src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=500&q=80"
+              alt="Thor, cão husky"
+              loading="lazy"
+            />
+            <span class="pet-badge">Disponível</span>
+          </div>
+          <div class="pet-info">
+            <div class="pet-name">Thor 🐺</div>
+            <div class="pet-details">Husky · 3 anos · Macho</div>
+            <a href="#contato" class="btn btn-primary pet-btn">Adotar Thor</a>
+          </div>
+        </article>
+
+        <article class="pet-card fade-up" aria-label="Luna - disponível para adoção">
+          <div class="pet-img-wrap">
+            <img
+              class="pet-img"
+              src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=500&q=80"
+              alt="Luna, cachorrinha branca"
+              loading="lazy"
+            />
+            <span class="pet-badge">Disponível</span>
+          </div>
+          <div class="pet-info">
+            <div class="pet-name">Luna 🌙</div>
+            <div class="pet-details">SRD · 8 meses · Fêmea</div>
+            <a href="#contato" class="btn btn-primary pet-btn">Adotar Luna</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align:center;margin-top:40px" class="fade-up">
+        <a href="#contato" class="btn btn-green">Ver todos os animais disponíveis</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" aria-labelledby="depo-title">
+    <div class="container">
+      <div class="fade-up">
+        <span class="section-label">Histórias Reais</span>
+        <h2 class="section-title" id="depo-title">Quem adotou, transformou<br>sua vida também</h2>
+      </div>
+
+      <div class="depo-grid">
+        <article class="depo-card fade-up">
+          <div class="depo-stars" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="depo-text">
+            "Adotei a Mel há seis meses e ela transformou completamente minha rotina. 
+            É impossível imaginar a vida sem ela agora. O processo de adoção foi super 
+            fácil e a equipe me acompanhou em cada etapa."
+          </p>
+          <div class="depo-author">
+            <img
+              class="depo-avatar"
+              src="https://i.pravatar.cc/100?img=47"
+              alt="Foto de Ana Paula"
+              loading="lazy"
+            />
+            <div>
+              <div class="depo-name">Ana Paula S.</div>
+              <div class="depo-city">São Paulo, SP</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="depo-card fade-up">
+          <div class="depo-stars" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="depo-text">
+            "O Thor chegou traumatizado, mas com muito amor e paciência ele se tornou o 
+            cachorro mais doce e carinhoso. Gratidão eterna ao Projeto Animais Sem Teto 
+            por todo o suporte e carinho."
+          </p>
+          <div class="depo-author">
+            <img
+              class="depo-avatar"
+              src="https://i.pravatar.cc/100?img=32"
+              alt="Foto de Ricardo M."
+              loading="lazy"
+            />
+            <div>
+              <div class="depo-name">Ricardo M.</div>
+              <div class="depo-city">Campinas, SP</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="depo-card fade-up">
+          <div class="depo-stars" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="depo-text">
+            "Comecei como voluntária e não consegui mais parar. Ver a evolução de um 
+            animal assustado até se tornar um pet feliz num lar amoroso é a melhor 
+            recompensa que existe. Recomendo a todos!"
+          </p>
+          <div class="depo-author">
+            <img
+              class="depo-avatar"
+              src="https://i.pravatar.cc/100?img=25"
+              alt="Foto de Juliana C."
+              loading="lazy"
+            />
+            <div>
+              <div class="depo-name">Juliana C.</div>
+              <div class="depo-city">Ribeirão Preto, SP</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" aria-labelledby="contato-title">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-info fade-up">
+          <span class="section-label">Fale Conosco</span>
+          <h2 class="section-title" id="contato-title">Vamos conversar?</h2>
+          <p style="margin-top:16px">
+            Tem dúvidas sobre adoção, quer ser voluntário ou parceiro? 
+            Entre em contato. Respondemos em até 24 horas.
+          </p>
+
+          <div class="contato-item">
+            <div class="contato-icon" aria-hidden="true">📍</div>
+            <span>Rua dos Animais, 123 — São Paulo, SP</span>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon" aria-hidden="true">📞</div>
+            <span>(11) 91234-5678</span>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon" aria-hidden="true">✉️</div>
+            <span>contato@animaissemteto.org.br</span>
+          </div>
+          <div class="contato-item">
+            <div class="contato-icon" aria-hidden="true">🕐</div>
+            <span>Seg–Sex: 9h–18h · Sáb: 10h–14h</span>
+          </div>
+
+          <nav class="social-links" aria-label="Redes sociais">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          </nav>
+        </div>
+
+        <div class="form-card fade-up">
+          <h3>Envie uma mensagem</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto">
+                <option value="">Selecione um assunto</option>
+                <option value="adocao">Quero adotar</option>
+                <option value="doacao">Quero doar</option>
+                <option value="voluntario">Quero ser voluntário</option>
+                <option value="parceria">Proposta de parceria</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              ❤️ Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon" aria-hidden="true">🐾</div>
+            <div class="logo-text">
+              Projeto Animais<br>
+              <span>Sem Teto</span>
+            </div>
+          </div>
+          <p>
+            Desde 2018 transformando vidas animais e humanas com amor, 
+            cuidado e muito trabalho voluntário.
+          </p>
+        </div>
+
+        <nav class="footer-col" aria-label="Links rápidos">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre a ONG</a></li>
+            <li><a href="#como-ajudar">Como Ajudar</a></li>
+            <li><a href="#adocao">Adoção</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Links de ajuda">
+          <h4>Ajude</h4>
+          <ul>
+            <li><a href="#doe">Fazer Doação</a></li>
+            <li><a href="#adocao">Adotar um Pet</a></li>
+            <li><a href="#contato">Ser Voluntário</a></li>
+            <li><a href="#contato">Parceiros</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Transparência</h4>
+          <ul>
+            <li><a href="#">Prestação de Contas</a></li>
+            <li><a href="#">CNPJ: 00.000.000/0001-00</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Estatuto Social</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 Projeto Animais Sem Teto. Todos os direitos reservados.</p>
+        <nav class="social-links" aria-label="Redes sociais do rodapé">
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
