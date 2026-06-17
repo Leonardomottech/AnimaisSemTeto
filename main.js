@@ -13,21 +13,29 @@ window.addEventListener('scroll', () => {
 const hamburger    = document.getElementById('hamburger');
 const mobileNav    = document.getElementById('mobileNav');
 const mobileClose  = document.getElementById('mobileNavClose');
+const mobileLinks  = mobileNav.querySelectorAll('a');
 
 hamburger.addEventListener('click', () => {
   mobileNav.classList.add('open');
+  mobileNav.setAttribute('aria-hidden', 'false');
   hamburger.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
+  mobileClose.focus();
 });
 
 function closeMobileNav() {
   mobileNav.classList.remove('open');
+  mobileNav.setAttribute('aria-hidden', 'true');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
+  hamburger.focus();
 }
 
 mobileClose.addEventListener('click', closeMobileNav);
-mobileClose.addEventListener('keydown', e => { if (e.key === 'Enter') closeMobileNav(); });
+mobileLinks.forEach(link => link.addEventListener('click', closeMobileNav));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
+});
 
 // -----------------------------------------------
 // FADE-IN on scroll (Intersection Observer)
@@ -83,17 +91,22 @@ statsObserver.observe(statsSection);
 // -----------------------------------------------
 // DOAÇÃO: selecionar valor
 // -----------------------------------------------
-const doeBtn = document.querySelector('.doe-banner .btn');
+const doeBtn = document.querySelector('.doe-confirm');
+const amountButtons = document.querySelectorAll('.doe-amount');
 
 function selectAmount(btn, value) {
-  document.querySelectorAll('.doe-amount').forEach(b => b.classList.remove('active'));
+  amountButtons.forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   if (value === 'outro') {
-    doeBtn.textContent = '❤️ Informar Meu Valor';
+    doeBtn.textContent = '❤️ Informar meu valor';
   } else {
     doeBtn.textContent = `❤️ Confirmar Doação de R$ ${value}`;
   }
 }
+
+amountButtons.forEach(btn => {
+  btn.addEventListener('click', () => selectAmount(btn, btn.dataset.amount));
+});
 
 // -----------------------------------------------
 // FORMULÁRIO DE CONTATO
@@ -105,9 +118,10 @@ form.addEventListener('submit', (e) => {
 
   const name    = document.getElementById('name').value.trim();
   const email   = document.getElementById('email').value.trim();
+  const subject = document.getElementById('assunto').value;
   const msg     = document.getElementById('mensagem').value.trim();
 
-  if (!name || !email || !msg) {
+  if (!name || !email || !subject || !msg) {
     showToast('⚠️ Por favor, preencha todos os campos obrigatórios.', '#E8712A');
     return;
   }
@@ -148,7 +162,7 @@ function showToast(msg, bg = '#3D7A5E') {
 // -----------------------------------------------
 // ACTIVE NAV LINK on scroll
 // -----------------------------------------------
-const sections   = document.querySelectorAll('section[id]');
+const sections   = document.querySelectorAll('section[id], .doe-banner[id]');
 const navLinks   = document.querySelectorAll('nav ul li a');
 
 window.addEventListener('scroll', () => {
